@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.mobile:hover{
+    background-color: #1a687b65;
+    color: #1a677b;
+}
+.mobilev2{
+    background-color: #1a687b65;
+    color: white;
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+}
+.circle{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 400%;
+  }
