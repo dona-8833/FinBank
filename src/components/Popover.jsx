@@ -9,10 +9,6 @@ const Notification = () => {
     setOpen(false);
   };
 
-  // const handleOpenChange = (newOpen) => {
-  //   setOpen(newOpen);
-  // };
-
   // Dummy notifications
   const notifications = [
     { id: 1, message: "Your payment of $500 was successful.", time: "2 minutes ago" },
@@ -44,6 +40,7 @@ const Notification = () => {
         style={{
           width: "100%", // Full width on mobile
           maxWidth: "500px", // Limit width on desktop (optional)
+          padding: "0", // Remove extra padding
         }}
       >
         <div className="p-6">
