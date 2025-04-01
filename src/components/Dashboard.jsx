@@ -313,7 +313,7 @@ function Dashboard() {
           </div>
       </div>
 
-      <div className="bg-white p-6 shadow-md rounded-xl mt-4">
+      <div className="bg-white p-6 shadow-md mb-4 rounded-xl mt-4">
         <h2 className="text-lg font-semibold">Spending Overview</h2>
           <BalanceChart />
       </div>
