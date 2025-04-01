@@ -11,14 +11,19 @@ const data = [
 
 const BalanceChart = () => {
   return (
-    <div className="bg-white p-6 shadow rounded-xl">
+    <div className="bg-white p-6 rounded-xl"> {/* Removed shadow */}
       <h2 className="text-xl font-semibold mb-4">Balance Overview</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
-          <Bar dataKey="balance" fill="#1a677b" radius={[5, 5, 0, 0]} />
+          <Tooltip cursor={{ fill: "transparent" }} /> {/* Remove bar shadow effect */}
+          <Bar
+            dataKey="balance"
+            fill="#1a677b"
+            radius={[5, 5, 0, 0]}
+            className="hover:fill-[#1a687b65]" // Darker shade on hover
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

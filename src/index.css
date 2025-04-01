@@ -5,8 +5,14 @@
     color: #1a677b;
 }
 .mobilev2{
-    background-color: #1a687b65;
+    background-color: #1a677b;
+    transition: all;
+    transition-duration: 300ms;
     color: white;
+    
+}
+.mobilev2:hover{
+    background-color: #1a687b65;
 }
 .avatar{
     height: 50px;
@@ -15,4 +21,12 @@
 .circle{
     border-top-left-radius: 50%;
     border-bottom-left-radius: 400%;
+  }
+  .deposit{
+    background-color: #1a677b;
+    transition: all;
+    transition-duration: 300ms;
+  }
+  .deposit:hover{
+    background-color: #1a687b65;
   }

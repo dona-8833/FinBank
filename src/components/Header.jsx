@@ -3,6 +3,7 @@ import React from 'react'
 import { CiBellOn } from 'react-icons/ci'
 import { FaMoon } from 'react-icons/fa'
 import Notification from './Popover'
+import UserProfile from './Avatar'
 
 function Header() {
   return (
@@ -20,8 +21,7 @@ function Header() {
         
     <Notification className="" />
     </Badge>
-    
-    <Avatar src={""} className='avatar'    shape='circle'/>
+    <UserProfile/>
     </Space>
   </div>
 </div>

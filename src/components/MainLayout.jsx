@@ -14,7 +14,7 @@ function MainLayout() {
         <Header />
 
         {/* Page Content */}
-        <div className="p- pt-[1rem] md:pt-[2rem] min-h-screen bg-gray-100">
+        <div className=" pt-[1rem] md:pt-[2rem] min-h-screen bg-gray-100">
           <Outlet />
         </div>
       </div>

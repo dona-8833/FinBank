@@ -4,6 +4,7 @@ import { IoIosAddCircle, IoIosSend } from "react-icons/io";
 import { IoAddCircleOutline } from "react-icons/io5";
 import BalanceChart from "./ReChart";
 import { FaChartPie, FaCreditCard, FaWallet } from "react-icons/fa";
+import Togglebal from './Togglebal'
 
 function Dashboard() {
   const solidColor = {
@@ -231,14 +232,13 @@ function Dashboard() {
       {/* Top Section - Balance */}
       <div className="bg-white px-6 py-8 shadow-md rounded-xl flex flex-col items-center ">
         <div className="flex items-center justify-between w-full">
-          <h2 className="text-lg font-semibold">Total Balance</h2>
-          <p className="text-xl text-gray-600 font-light cursor-pointer ml-auto">
-  History &gt;
+          <h2 className="text-l font-semibold">Total Balance</h2>
+          <p className="text-l text-gray-600 font-light cursor-pointer ml-auto">
+  History 
 </p>
         </div>
         <div className="flex flex-row-reverse justify-between items-center w-full mt-4">
-          <button className="text-lg font-semibold px-2 py-3 rounded-full text-white" style={cardColor}>Add Money</button>
-          <p className="text-2xl font-bold">$5,000</p>
+            <Togglebal/>
         </div>
         {/* <FaWallet className="text-3xl " style={solidColorText} /> */}
       </div>
@@ -246,7 +246,7 @@ function Dashboard() {
       {/* Debit Card Section */}
       <div className="bg-white p-6 shadow-md rounded-xl mt-4">
         <div className="grid grid-cols-2 items-center justify-between space-x-2 mt-2">
-          <p className="p-3 rounded-full mobilev2 text-center"> Send</p>
+          <p className="p-3 rounded-full mobilev2 text-center "> Send</p>
           <p className="p-3 rounded-full  mobilev2 text-center">Receive</p>
         </div>
       </div>

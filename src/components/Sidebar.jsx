@@ -55,21 +55,38 @@ function Sidebar() {
     </div>
     {/* // mobile nav */}
     <div className="w-full md:hidden bg-white py-3 px-4 grid grid-cols-5 gap-4 text-gray-600 text-2xl place-items-center fixed bottom-0">
-      <div className="p-4 mobile rounded-2xl transition-all duration-300">
+  <div className="p-4 mobile rounded-2xl transition-all duration-300 relative group">
     <GrHomeRounded />
-      </div>
-      <div className="p-4 mobile rounded-2xl transition-all duration-300">
-      <MdOutlineAccountBalanceWallet />
-      </div>
-      <div className="p-4 mobile rounded-2xl transition-all duration-300">
-      <FiDollarSign />
-      </div>
-      <div className="p-4 mobile rounded-2xl transition-all duration-300">
-      <IoCardOutline />
-      </div>
-      <div className="p-4 mobile rounded-2xl transition-all duration-300">
-      <FaRegUser />
-      </div>
+    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#145661] text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+      Home
+    </span>
+  </div>
+  <div className="p-4 mobile rounded-2xl transition-all duration-300 relative group">
+    <MdOutlineAccountBalanceWallet />
+    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#145661] text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+      Wallet
+    </span>
+  </div>
+  <div className="p-4 mobile rounded-2xl transition-all duration-300 relative group">
+    <FiDollarSign />
+    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#145661] text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+      Transactions
+    </span>
+  </div>
+  <div className="p-4 mobile rounded-2xl transition-all duration-300 relative group">
+    <IoCardOutline />
+    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#145661] text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+      Cards
+    </span>
+  </div>
+  <div className="p-4 mobile rounded-2xl transition-all duration-300 relative group">
+    <FaRegUser />
+    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#145661] text-white text-sm px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+      Profile
+    </span>
+  </div>
+  
+
 
 
 </div>

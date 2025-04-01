@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Badge, Popover } from 'antd';
-import { FaBell } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Drawer, Button } from "antd";
+import { FaBell } from "react-icons/fa";
 
 const Notification = () => {
   const [open, setOpen] = useState(false);
@@ -9,37 +9,69 @@ const Notification = () => {
     setOpen(false);
   };
 
-  const handleOpenChange = (newOpen) => {
-    setOpen(newOpen);
-  };
+  // const handleOpenChange = (newOpen) => {
+  //   setOpen(newOpen);
+  // };
+
+  // Dummy notifications
+  const notifications = [
+    { id: 1, message: "Your payment of $500 was successful.", time: "2 minutes ago" },
+    { id: 2, message: "You have a new login from a new device.", time: "5 hours ago" },
+    { id: 3, message: "Your account has been upgraded to Gold.", time: "1 day ago" },
+    { id: 4, message: "You have a new transfer request.", time: "3 days ago" },
+    { id: 5, message: "Reminder: Your password will expire in 7 days.", time: "5 days ago" },
+  ];
 
   return (
-    <Popover
-      content={
-        <div>
-          <p className="text-gray-700">You have no new notifications.</p>
-          <button 
-            onClick={hide} 
-            className="mt-2 px-3 py-1 bg-red-500 text-white rounded-lg"
-          >
-            Close
-          </button>
-        </div>
-      }
-      title="Notifications"
-      trigger="click"
-      open={open}
-      onOpenChange={handleOpenChange}
-    >
-
-
-            
-      <div className="p-4 rounded-2xl shadow bg-white cursor-pointer">
+    <>
+      {/* Notification Icon */}
+      <div
+        className="cursor-pointer p-4 rounded-full bg-white shadow-lg"
+        onClick={() => setOpen(true)}
+      >
         <FaBell className="text-2xl text-[#1a677b]" />
       </div>
-        
-        
-    </Popover>
+
+      {/* Notification Drawer */}
+      <Drawer
+        title="Notifications"
+        placement="bottom"
+        closable={true}
+        onClose={() => setOpen(false)}
+        open={open}
+        height="100vh"
+        className="md:hidden" // Hide drawer on desktop
+        style={{
+          width: "100%", // Full width on mobile
+          maxWidth: "500px", // Limit width on desktop (optional)
+        }}
+      >
+        <div className="p-6">
+          {/* Notification List */}
+          <div className="space-y-4">
+            {notifications.map((notification) => (
+              <div
+                key={notification.id}
+                className="bg-white p-4 rounded-lg shadow-md flex justify-between items-center space-x-4"
+              >
+                <div>
+                  <p className="font-semibold text-gray-800">{notification.message}</p>
+                  <p className="text-sm text-gray-500">{notification.time}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Close Button */}
+          <Button
+            className="mt-6 w-full bg-red-500 text-white"
+            onClick={hide}
+          >
+            Close
+          </Button>
+        </div>
+      </Drawer>
+    </>
   );
 };
 
