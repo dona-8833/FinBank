@@ -4,6 +4,7 @@ import { CiBellOn } from 'react-icons/ci'
 import { FaMoon } from 'react-icons/fa'
 import Notification from './Popover'
 import UserProfile from './Avatar'
+import Togglebtn from './Togglebtn'
 
 function Header() {
   return (
@@ -13,9 +14,9 @@ function Header() {
     <p className="text-gray-500 text-lg md:text-2xl">Hi, <span className="font-semibold text-lg md:text-2xl">John Doe</span> </p>
   </div>
   <div className='flex items-center space-x-4'>
-    <button className='p-4 rounded-2xl shadow bg-white hidden md:block'>
-        <FaMoon className='text-2xl' style={{color:"#1a677b"}} />
-    </button>
+    <div className='p-4 rounded-2xl shadow bg-white hidden md:block'>
+      <Togglebtn/>
+    </div>
     <Space size={15}>
     <Badge count={1}>
         
