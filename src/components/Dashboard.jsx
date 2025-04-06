@@ -21,10 +21,10 @@ function Dashboard() {
   };
   return (
     <>
-      <div className=" grid-cols-1 hidden md:grid  gap-6 p-4 md:p-6 lg:p-7 xl:p-10 2xl:p-12 bg-gray-100 scro">
+      <div className=" grid-cols-1 hidden md:grid  gap-6 p-4 md:p-6 lg:p-7 xl:p-10 2xl:p-12 bg-gray-100 dark:bg-gray-800">
         {/* Debit Card Account Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="bg-white p-6 shadow rounded-xl col-span-12 md:col-span-12 lg:col-span-7">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 dark:bg-gray-800">
+          <div className="bg-white p-6 shadow rounded-xl col-span-12 md:col-span-12 lg:col-span-7 dark:bg-gray-800 dark:shadow-2xl">
             <h1 className="font-bold text-xl">Debit Card Account</h1>
             <div className="grid grid-cols-12 gap-10">
               {/* Debit card section */}
@@ -54,7 +54,7 @@ function Dashboard() {
 
               {/* Card details */}
               <div className="lg:flex flex-col  items-center justify-center hidden lg:col-span-5 ">
-                <div className="bg-gray-300 p-6 rounded-lg shadow-lg flex items-center justify-center text-2xl text-white">
+                <div className="bg-gray-300 p-6 rounded-lg shadow-lg flex items-center justify-center text-2xl text-white dark:bg-gray-800 dark:shadow-2xl">
                   <IoIosAddCircle />
                 </div>
                 <p style={solidColorText} className="mt-5 font-bold">
@@ -65,8 +65,8 @@ function Dashboard() {
           </div>
 
           {/* Total Balance Section */}
-          <div className="bg-white p-6 shadow rounded-xl col-span-12 md:col-span-12 lg:col-span-5">
-            <div className="p-5 bg-white  space-y-4">
+          <div className="bg-white p-6 shadow rounded-xl col-span-12 md:col-span-12 lg:col-span-5 dark:bg-gray-800 dark:shadow-2xl">
+            <div className="p-5 bg-white  space-y-4 dark:bg-gray-800 dark:text-gray-400">
               <p className="text-center text-2xl font-bold">
                 Your Total Balance
               </p>
@@ -81,8 +81,7 @@ function Dashboard() {
               </p>
               <div className="  flex justify-center space-x-5 items-center mt-3 ">
                 <span
-                  to={"/FundTransfer"}
-                  className="p-5 bg-white rounded-lg flex items-center justify-center flex-col shadow-lg"
+                  className="p-5 bg-white rounded-lg flex items-center justify-center flex-col shadow-lg dark:bg-gray-800 dark:shadow-2xl"
                 >
                   <IoIosSend
                     style={solidColorText}
@@ -95,7 +94,7 @@ function Dashboard() {
                     Send
                   </p>
                 </span>
-                <span className=" bg-white p-5 rounded-lg flex items-center justify-center flex-col shadow-lg">
+                <span className=" bg-white p-5 rounded-lg flex items-center justify-center flex-col shadow-lg dark:bg-gray-800 dark:shadow-2xl">
                   <IoAddCircleOutline
                     style={solidColorText}
                     className=" font-bold text-2xl"
@@ -116,9 +115,9 @@ function Dashboard() {
           {/* Recent Transactions Section */}
           <div
             className="bg-white  shadow rounded-xl col-span-12
-         lg:col-span-5"
+         lg:col-span-5 dark:bg-gray-800 dark:shadow-2xl"
           >
-            <div className="p-5 bg-white   rounded-lg ">
+            <div className="p-5 bg-white   rounded-lg dark:bg-gray-800 dark:shadow-2xl dark:text-gray-400">
               <span>
                 <p className="font-bold pb-10">Recent Transaction</p>
               </span>
@@ -218,7 +217,7 @@ function Dashboard() {
             {/* Add transaction list or chart here */}
           </div>
           {/* Expenses Instead Section */}
-          <div className="bg-white p-6 shadow rounded-xl col-span-12 lg:col-span-7">
+          <div className="bg-white p-6 shadow rounded-xl col-span-12 lg:col-span-7 dark:bg-gray-800 dark:shadow-2xl">
             {/* Add expense chart or data here */}
             <BalanceChart />
           </div>
@@ -227,10 +226,10 @@ function Dashboard() {
 
       {/* Mobile View - Responsive Design */}
       {/* // mobile view */}
-      <div className="sm:block md:hidden  bg-gray-100 min-h-screen">
+      <div className="sm:block md:hidden  bg-gray-100 min-h-screen dark:bg-gray-800 text-gray-400">
       
       {/* Top Section - Balance */}
-      <div className="bg-white px-6 py-8 shadow-md rounded-xl flex flex-col items-center ">
+      <div className="bg-white px-6 py-8 shadow-md rounded-xl flex flex-col items-center dark:bg-gray-800 text-gray-400 ">
         <div className="flex items-center justify-between w-full">
           <h2 className="text-l font-semibold">Total Balance</h2>
           <p className="text-l text-gray-600 font-light cursor-pointer ml-auto">
@@ -244,7 +243,7 @@ function Dashboard() {
       </div>
 
       {/* Debit Card Section */}
-      <div className="bg-white p-6 shadow-md rounded-xl mt-4">
+      <div className="bg-white p-6 shadow-md rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
         <div className="grid grid-cols-2 items-center justify-between space-x-2 mt-2">
           <p className="p-3 rounded-full mobilev2 text-center "> Send</p>
           <p className="p-3 rounded-full  mobilev2 text-center">Receive</p>
@@ -255,8 +254,8 @@ function Dashboard() {
 
 
       {/* Transactions Section */}
-      <div className="bg-white p-6 shadow-md w-full rounded-xl mt-4">
-      <div className="p-5 bg-white ">
+      <div className="bg-white p-6 shadow-md w-full rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
+      <div className="p-5 bg-white dark:bg-gray-800 text-gray-400">
           <span>
               <p className="font-bold pb-2">Recent Transaction</p>
             </span>
@@ -313,8 +312,7 @@ function Dashboard() {
           </div>
       </div>
 
-      <div className="bg-white p-6 shadow-md mb-10 rounded-xl mt-4">
-        <h2 className="text-lg font-semibold">Spending Overview</h2>
+      <div className="bg-white p-6 shadow-md mb-10 rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
           <BalanceChart />
       </div>
 

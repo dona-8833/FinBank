@@ -14,7 +14,7 @@ function Header() {
     <p className="text-gray-500 text-lg md:text-2xl">Hi, <span className="font-semibold text-lg md:text-2xl">John Doe</span> </p>
   </div>
   <div className='flex items-center space-x-4'>
-    <div className='p-4 rounded-2xl shadow bg-white hidden md:block'>
+    <div className='p-3 rounded-full shadow bg-white hidden md:block dark:bg-gray-800 dark:shadow-2xl'>
       <Togglebtn/>
     </div>
     <Space size={15}>

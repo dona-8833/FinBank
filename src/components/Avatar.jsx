@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Drawer, Button } from "antd";
 import { FaUserCircle } from "react-icons/fa";
+import { useDarkMode } from "../context/ThemeContext";
 
 const UserProfile = () => {
   const [open, setOpen] = useState(false);
+  const { darkMode } = useDarkMode(); // Get darkMode from context
 
   // Sample user data
   const user = {
@@ -23,7 +25,7 @@ const UserProfile = () => {
     <>
       {/* Profile Icon */}
       <div
-        className="cursor-pointer p-4 rounded-full bg-white shadow-lg"
+        className="cursor-pointer p-4 rounded-full bg-white shadow-lg dark:bg-gray-800 dark:shadow-2xl"
         onClick={() => setOpen(true)}
       >
         <FaUserCircle className="text-2xl text-[#1a677b]" />
@@ -31,7 +33,7 @@ const UserProfile = () => {
 
       {/* User Profile Drawer */}
       <Drawer
-        title="User Profile"
+        title={<span className={darkMode ? "text-white" : "text-gray-800"}>User Profile</span>} // Title color changes based on darkMode
         placement="bottom"
         closable={true}
         onClose={() => setOpen(false)}
@@ -39,8 +41,9 @@ const UserProfile = () => {
         height="100vh"
         className="md:hidden"
         style={{
-          width: '100%', // Full width on mobile
-          maxWidth: '500px', // Limit the width on desktop to 500px
+          width: "100%", // Full width on mobile
+          maxWidth: "500px", // Limit width on desktop
+          backgroundColor: darkMode ? "#2d3748" : "#fff", // Dark mode background
         }}
       >
         <div className="p-6">
@@ -57,56 +60,56 @@ const UserProfile = () => {
           <div className="space-y-6">
             {/* Account Number */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Account Number:</label>
-              <p className="text-xl text-gray-600">{user.accountNumber}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Account Number:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.accountNumber}</p>
             </div>
 
             {/* Account Level */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Account Level:</label>
-              <p className="text-xl text-gray-600">{user.accountLevel}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Account Level:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.accountLevel}</p>
             </div>
 
             {/* Full Name */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Full Name:</label>
-              <p className="text-2xl font-bold">{user.fullName}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Full Name:</label>
+              <p className="text-2xl font-bold text-gray-600 dark:text-white">{user.fullName}</p>
             </div>
 
             {/* Mobile Number */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Mobile Number:</label>
-              <p className="text-xl text-gray-600">{user.mobileNumber}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Mobile Number:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.mobileNumber}</p>
             </div>
 
             {/* Nickname */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Nickname:</label>
-              <p className="text-xl text-gray-600">{user.nickname}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Nickname:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.nickname}</p>
             </div>
 
             {/* Gender */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Gender:</label>
-              <p className="text-xl text-gray-600">{user.gender}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Gender:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.gender}</p>
             </div>
 
             {/* Date of Birth */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Date of Birth:</label>
-              <p className="text-xl text-gray-600">{user.dateOfBirth}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Date of Birth:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.dateOfBirth}</p>
             </div>
 
             {/* Email */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Email:</label>
-              <p className="text-xl text-gray-600">{user.email}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Email:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.email}</p>
             </div>
 
             {/* Address */}
             <div className="flex justify-between items-center">
-              <label className="text-lg text-gray-600">Address:</label>
-              <p className="text-xl text-gray-600">{user.address}</p>
+              <label className="text-lg text-gray-600 dark:text-gray-300">Address:</label>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{user.address}</p>
             </div>
           </div>
 

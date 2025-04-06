@@ -14,7 +14,7 @@ function Sidebar() {
   return (
     <>
     {/* // laptop nav */}
-    <div className=" md:p-5 w-full bg-white shadow-lg md:w-[19rem] fixed bottom-0 h-15 md:h-full ">
+    <div className=" md:p-5 w-full bg-white shadow-lg md:w-[19rem] fixed bottom-0 h-15 md:h-full dark:bg-gray-900 ">
       <h1
         style={{}}
         className="pb-3 text-[25px] font-bold text-green-900 hidden md:block"
