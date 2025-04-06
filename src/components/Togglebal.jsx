@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const BalanceDisplay = () => {
   const [hidden, setHidden] = useState(false);
-  const balance = "$5,000"; // You can replace this with dynamic balance data
+  const balance = "₦5,000"; // You can replace this with dynamic balance data
 
   return (
     <div className="flex flex-row-reverse justify-between items-center w-full ">

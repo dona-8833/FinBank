@@ -13,7 +13,7 @@ const Notification = () => {
 
   // Dummy notifications
   const notifications = [
-    { id: 1, message: 'Your payment of $500 was successful.', time: '2 minutes ago' },
+    { id: 1, message: 'Your payment of ₦500 was successful.', time: '2 minutes ago' },
     { id: 2, message: 'You have a new login from a new device.', time: '5 hours ago' },
     { id: 3, message: 'Your account has been upgraded to Gold.', time: '1 day ago' },
     { id: 4, message: 'You have a new transfer request.', time: '3 days ago' },
@@ -24,7 +24,7 @@ const Notification = () => {
     <>
       {/* Notification Icon */}
       <div
-        className="cursor-pointer p-4 rounded-full bg-white shadow-lg dark:bg-gray-800 dark:shadow-2xl"
+        className="cursor-pointer p-3 rounded-full bg-white shadow-lg dark:bg-gray-800 dark:shadow-2xl"
         onClick={() => setOpen(true)}
       >
         <FaBell className="text-2xl text-[#1a677b]" />

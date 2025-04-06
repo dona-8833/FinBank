@@ -74,7 +74,7 @@ function Dashboard() {
                 style={solidColorText}
                 className="text-4xl mt-3 text-center font-bold"
               >
-                $80,201.50
+                ₦80,201.50
               </h1>
               <p className="text-center text-xl font-light text-gray-600 mt-5">
                 December 21, 2025 . 02:30PM
@@ -134,7 +134,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -149,7 +149,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -164,7 +164,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -179,7 +179,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -194,7 +194,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
@@ -209,7 +209,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div>
-                    <p className="">+$8,200.00</p>
+                    <p className="">+₦8,200.00</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ function Dashboard() {
       <div className="sm:block md:hidden  bg-gray-100 min-h-screen dark:bg-gray-800 text-gray-400">
       
       {/* Top Section - Balance */}
-      <div className="bg-white px-6 py-8 shadow-md rounded-xl flex flex-col items-center dark:bg-gray-800 text-gray-400 ">
+      <div className="bg-white px-6 py-8 shadow-md rounded-xl flex  flex-col text-black items-center dark:bg-gray-800 dark:text-gray-400 ">
         <div className="flex items-center justify-between w-full">
           <h2 className="text-l font-semibold">Total Balance</h2>
           <p className="text-l text-gray-600 font-light cursor-pointer ml-auto">
@@ -255,7 +255,7 @@ function Dashboard() {
 
       {/* Transactions Section */}
       <div className="bg-white p-6 shadow-md w-full rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
-      <div className="p-5 bg-white dark:bg-gray-800 text-gray-400">
+      <div className="p-5 bg-white dark:bg-gray-800 dark:text-gray-400 text-black">
           <span>
               <p className="font-bold pb-2">Recent Transaction</p>
             </span>
@@ -269,7 +269,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div>
-                  <p className="">+$8,200.00</p>
+                  <p className="">+₦8,200.00</p>
                 </div>
               </div>
               <div className="flex justify-between items-center">
@@ -281,7 +281,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div>
-                  <p className="">+$8,200.00</p>
+                  <p className="">+₦8,200.00</p>
                 </div>
               </div>
               <div className="flex justify-between items-center">
@@ -293,7 +293,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div>
-                  <p className="">+$8,200.00</p>
+                  <p className="">+₦8,200.00</p>
                 </div>
               </div>
               <div className="flex justify-between items-center">
@@ -305,7 +305,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div>
-                  <p className="">+$8,200.00</p>
+                  <p className="">+₦8,200.00</p>
                 </div>
               </div>
             </div>

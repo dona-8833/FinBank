@@ -25,7 +25,7 @@ const UserProfile = () => {
     <>
       {/* Profile Icon */}
       <div
-        className="cursor-pointer p-4 rounded-full bg-white shadow-lg dark:bg-gray-800 dark:shadow-2xl"
+        className="cursor-pointer p-3 rounded-full bg-white shadow-lg dark:bg-gray-800 dark:shadow-2xl"
         onClick={() => setOpen(true)}
       >
         <FaUserCircle className="text-2xl text-[#1a677b]" />
