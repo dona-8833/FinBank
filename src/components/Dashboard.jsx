@@ -4,7 +4,8 @@ import { IoIosAddCircle, IoIosSend } from "react-icons/io";
 import { IoAddCircleOutline } from "react-icons/io5";
 import BalanceChart from "./ReChart";
 import { FaChartPie, FaCreditCard, FaWallet } from "react-icons/fa";
-import Togglebal from './Togglebal'
+import Togglebal from "./Togglebal";
+import { Chip } from "@mui/material";
 
 function Dashboard() {
   const solidColor = {
@@ -80,9 +81,7 @@ function Dashboard() {
                 December 21, 2025 . 02:30PM
               </p>
               <div className="  flex justify-center space-x-5 items-center mt-3 ">
-                <span
-                  className="p-5 bg-white rounded-lg flex items-center justify-center flex-col shadow-lg dark:bg-gray-800 dark:shadow-2xl"
-                >
+                <span className="p-5 bg-white rounded-lg flex items-center justify-center flex-col shadow-lg dark:bg-gray-800 dark:shadow-2xl">
                   <IoIosSend
                     style={solidColorText}
                     className=" font-bold text-2xl"
@@ -124,94 +123,62 @@ function Dashboard() {
               <div className="flex gap-2 flex-col">
                 <div className="flex justify-between items-center">
                   <div className="flex gap-5 items-center">
-                    <div className="bg-blue-300 p-6 rounded-lg"></div>
                     <div className="flex flex-col">
                       <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
+                      <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                     </div>
                   </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
-                  </div>
+                  <Chip label="+₦8,200.00" color="success" variant="outlined" />
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="flex gap-5 items-center">
-                    <div className="bg-green-300 p-6 rounded-lg"></div>
                     <div className="flex flex-col">
-                      <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
+                      <p className="">Paypal - sent</p>
+                      <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                     </div>
                   </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
+                  <Chip label="-₦8,200.00" color="error" variant="outlined" />
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex gap-5 items-center">
+                  <div className="flex flex-col">
+                    <p className="">Paypal - Received</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-5 items-center">
-                    <div className="bg-blue-300 p-6 rounded-lg"></div>
-                    <div className="flex flex-col">
-                      <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
+                <Chip label="+₦8,200.00" color="success" variant="outlined" />
+
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex gap-5 items-center">
+                  <div className="flex flex-col">
+                    <p className="">Paypal - sent</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-5 items-center">
-                    <div className="bg-red-500 p-6 rounded-lg"></div>
-                    <div className="flex flex-col">
-                      <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
+                <Chip label="-₦8,200.00" color="error" variant="outlined" />
+
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex gap-5 items-center">
+                  <div className="flex flex-col">
+                    <p className="">Paypal - Received</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-5 items-center">
-                    <div className="bg-green-300 p-6 rounded-lg"></div>
-                    <div className="flex flex-col">
-                      <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
+                <Chip label="+₦8,200.00" color="success" variant="outlined" />
+
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex gap-5 items-center">
+                  <div className="flex flex-col">
+                    <p className="">Paypal - sent</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-5 items-center">
-                    <div className="bg-blue-300 p-6 rounded-lg"></div>
-                    <div className="flex flex-col">
-                      <p className="">Paypal - Received</p>
-                      <p className="text-gray-400">
-                        {" "}
-                        20 December 2025, 08:20AM
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="">+₦8,200.00</p>
-                  </div>
-                </div>
+                <Chip label="-₦8,200.00" color="error" variant="outlined" />
+
               </div>
             </div>{" "}
             {/* Add transaction list or chart here */}
@@ -227,96 +194,81 @@ function Dashboard() {
       {/* Mobile View - Responsive Design */}
       {/* // mobile view */}
       <div className="sm:block md:hidden  bg-gray-100 min-h-screen dark:bg-gray-800 text-gray-400">
-      
-      {/* Top Section - Balance */}
-      <div className="bg-white px-6 py-8 shadow-md rounded-xl flex  flex-col text-black items-center dark:bg-gray-800 dark:text-gray-400 ">
-        <div className="flex items-center justify-between w-full">
-          <h2 className="text-l font-semibold">Total Balance</h2>
-          <p className="text-l text-gray-600 font-light cursor-pointer ml-auto">
-  History 
-</p>
+        {/* Top Section - Balance */}
+        <div className="bg-white px-6 py-8 shadow-md rounded-xl flex  flex-col text-black items-center dark:bg-gray-800 dark:text-gray-400 ">
+          <div className="flex items-center justify-between w-full">
+            <h2 className="text-l font-semibold">Total Balance</h2>
+            <p className="text-l text-gray-600 font-light cursor-pointer ml-auto">
+              History
+            </p>
+          </div>
+          <div className="flex flex-row-reverse justify-between items-center w-full mt-4">
+            <Togglebal />
+          </div>
+          {/* <FaWallet className="text-3xl " style={solidColorText} /> */}
         </div>
-        <div className="flex flex-row-reverse justify-between items-center w-full mt-4">
-            <Togglebal/>
+
+        {/* Debit Card Section */}
+        <div className="bg-white p-6 shadow-md rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
+          <div className="grid grid-cols-2 items-center justify-between space-x-2 mt-2">
+            <p className="p-3 rounded-full mobilev2 text-center "> Send</p>
+            <p className="p-3 rounded-full  mobilev2 text-center">Receive</p>
+          </div>
         </div>
-        {/* <FaWallet className="text-3xl " style={solidColorText} /> */}
-      </div>
 
-      {/* Debit Card Section */}
-      <div className="bg-white p-6 shadow-md rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
-        <div className="grid grid-cols-2 items-center justify-between space-x-2 mt-2">
-          <p className="p-3 rounded-full mobilev2 text-center "> Send</p>
-          <p className="p-3 rounded-full  mobilev2 text-center">Receive</p>
-        </div>
-      </div>
+        {/* Chart Section */}
 
-      {/* Chart Section */}
-
-
-      {/* Transactions Section */}
-      <div className="bg-white p-6 shadow-md w-full rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
-      <div className="p-5 bg-white dark:bg-gray-800 dark:text-gray-400 text-black">
-          <span>
+        {/* Transactions Section */}
+        <div className="bg-white p-6 shadow-md w-full rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
+          <div className="p-5 bg-white dark:bg-gray-800 dark:text-gray-400 text-black">
+            <span>
               <p className="font-bold pb-2">Recent Transaction</p>
             </span>
-            <div className="flex gap-2 flex-col"> 
+            <div className="flex gap-2 flex-col">
               <div className="flex justify-between items-center">
                 <div className="flex gap-5 items-center">
-                  <div className="bg-blue-300 w-[40px] h-[40px] rounded-lg"></div>
                   <div className="flex flex-col">
-                    <p className="">Paypal - Received</p>
-                    <p className="text-gray-400"> 20 December 2025, 08:20AM</p>
+                    <p className="">Paypal - Sent</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div>
-                  <p className="">+₦8,200.00</p>
-                </div>
+                <Chip label="-₦8,200.00" color="error" variant="outlined" />
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex gap-5 items-center">
-                  <div className="bg-green-300 w-[40px] h-[40px] rounded-lg"></div>
                   <div className="flex flex-col">
                     <p className="">Paypal - Received</p>
-                    <p className="text-gray-400"> 20 December 2025, 08:20AM</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div>
-                  <p className="">+₦8,200.00</p>
-                </div>
+                <Chip label="+₦8,200.00" color="success" variant="outlined" />
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex gap-5 items-center">
-                  <div className="bg-blue-300 w-[40px] h-[40px] rounded-lg"></div>
                   <div className="flex flex-col">
-                    <p className="">Paypal - Received</p>
-                    <p className="text-gray-400"> 20 December 2025, 08:20AM</p>
+                    <p className="">Paypal - sent</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div>
-                  <p className="">+₦8,200.00</p>
-                </div>
+                <Chip label="-₦8,200.00" color="error" variant="outlined" />
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex gap-5 items-center">
-                  <div className="bg-red-500 w-[40px] h-[40px] rounded-lg"></div>
                   <div className="flex flex-col">
                     <p className="">Paypal - Received</p>
-                    <p className="text-gray-400"> 20 December 2025, 08:20AM</p>
+                    <p className="text-gray-400"> 20-12-2025, 08:20AM</p>
                   </div>
                 </div>
-                <div>
-                  <p className="">+₦8,200.00</p>
-                </div>
+                <Chip label="+₦8,200.00" color="success" variant="outlined" />
               </div>
             </div>
           </div>
-      </div>
+        </div>
 
-      <div className="bg-white p-6 shadow-md mb-10 rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
+        <div className="bg-white p-6 shadow-md mb-10 rounded-xl mt-4 dark:bg-gray-800 text-gray-400">
           <BalanceChart />
+        </div>
       </div>
-
-    </div>
     </>
   );
 }
