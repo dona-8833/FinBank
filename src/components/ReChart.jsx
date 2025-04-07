@@ -11,7 +11,7 @@ const data = [
 
 const BalanceChart = () => {
   return (
-    <div className="bg-white p-6 rounded-xl dark:bg-gray-800 "> {/* Removed shadow */}
+    <div className="bg-white p-6 rounded-xl dark:bg-gray-900 "> {/* Removed shadow */}
       <h2 className="text-xl font-semibold mb-4">Balance Overview</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>

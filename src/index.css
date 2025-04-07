@@ -1,20 +1,22 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-
+*{
+  box-sizing: border-box;
+}
 .mobile:hover{
     background-color: #1a687b65;
     color: #1a677b;
 }
 .mobilev2{
-    background-color: #1a677b;
-    transition: all;
-    transition-duration: 300ms;
-    color: white;
-    
+  transition: all;
+  transition-duration: 300ms;
+  
 }
 .mobilev2:hover{
-    background-color: #1a687b65;
+  background-color: #1a677b;
+  color: white;
+
 }
 .avatar{
     height: 50px;
@@ -32,3 +34,14 @@
   .deposit:hover{
     background-color: #1a687b65;
   }
+.mobilev3{
+  background-color:  #1a677b;
+  color: white;
+  transition: all;
+  transition-duration: 300ms;
+  
+}
+.mobilev3:hover{
+  background-color: #1a687b65;
+  color: #1a677b;
+}

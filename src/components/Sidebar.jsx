@@ -10,7 +10,7 @@ import {
   MdOutlineAccountBalanceWallet,
 } from "react-icons/md";
 import { TfiDashboard } from "react-icons/tfi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Mobile";
 import Togglebtn from "./Togglebtn";
 
@@ -18,7 +18,7 @@ function Sidebar() {
   return (
     <>
       {/* // laptop nav */}
-      <div className=" md:p-5 w-full bg-white shadow-lg md:w-[19rem] fixed bottom-0 h-15 md:h-full dark:bg-gray-900 ">
+      <div className=" md:p-5 w-full bg-white shadow-lg md:w-[19rem] fixed bottom-0 h-15 md:h-full dark:bg-gray-800 ">
         <span className="flex items-center justify-between p-3">
           <h1
             style={{}}
@@ -26,7 +26,7 @@ function Sidebar() {
           >
             FinBank
           </h1>
-          <div className='p-3 rounded-full shadow bg-white hidden md:block dark:bg-gray-800'>
+          <div className='p-3 rounded-full shadow bg-white hidden md:block dark:bg-gray-900'>
       <Togglebtn/>
     </div>
         </span>
@@ -34,13 +34,35 @@ function Sidebar() {
           <p className=" hidden md:block font-bold text-gray-300">Main Menu</p>
 
           <div className="flex flex-col space-y-2 mt-5">
-            <span className="text-gray-400 font-bold  p-4 mobile rounded-2xl transition-all duration-300   space-x-3 hidden md:flex">
-              <TfiDashboard className="text-2xl font-bold" /> <p> Dashboard</p>
-            </span>
-            <span className="text-gray-400 text-l p-4 mobile rounded-2xl transition-all duration-300 font-bold   space-x-3 hidden md:flex">
-              <MdOutlineAccountBalanceWallet className="text-2xl font-bold" />
-              <p> Fund Transfer</p>
-            </span>
+          <NavLink
+        to="/" // The route for this nav item
+        className={({ isActive }) =>
+          `font-bold p-4 rounded-2xl transition-all mobile duration-300 space-x-3 hidden md:flex ${
+            isActive
+              ? "bg-[#1a687b65] text-[#1a677b]" // Active state styling
+              : "bg-transparent text-gray-400" // Default (inactive) state styling
+          }`
+        }
+      >
+        <TfiDashboard className="text-2xl font-bold" />
+        <p>Dashboard</p>
+        </NavLink>
+        <NavLink
+        to="/transfer" // The route for this nav item
+        className={({ isActive }) =>
+          `font-bold p-4 rounded-2xl transition-all mobile duration-300 space-x-3 hidden md:flex ${
+            isActive
+              ? "bg-[#1a687b65] text-[#1a677b]" // Active state styling
+              : "bg-transparent text-gray-400" // Default (inactive) state styling
+          }`
+        }
+      >
+            <MdOutlineAccountBalanceWallet className="text-2xl font-bold" />
+            <p> Fund Transfer</p>
+      </NavLink>
+  
+
+
             <span className="text-gray-400 text-l font-bold  p-4 mobile rounded-2xl transition-all duration-300   space-x-3 hidden md:flex">
               <IoCard className="text-2xl font-bold" /> <p> Accounts</p>
             </span>
