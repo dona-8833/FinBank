@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 function TransferPage() {
   return (
     
-    <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8 dark:bg-gray-950">
+    <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8 dark:bg-gray-950 mb-10">
       <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl bg-white rounded-xl shadow-md p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8 md:space-y-10 dark:bg-gray-900 dark:text-gray-200">
         {/* Header */}
         <div className="text-center dark:text-gray-200">
