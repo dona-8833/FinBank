@@ -196,7 +196,7 @@ function Dashboard() {
 
       {/* Mobile View - Responsive Design */}
       {/* // mobile view */}
-      <div className="sm:block md:hidden  bg-gray-100 min-h-screen dark:bg-gray-900 text-gray-400">
+      <div className="sm:block md:hidden  bg-gray-100 min-h-screen dark:bg-gray-950 text-gray-400">
         {/* Top Section - Balance */}
         <div className="bg-white px-6 py-8 shadow-md rounded-xl flex  flex-col text-black items-center dark:bg-gray-900 dark:text-gray-400 ">
           <div className="flex items-center justify-between w-full">
@@ -268,7 +268,7 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="bg-white p-6 shadow-md mb-10 rounded-xl mt-4 dark:bg-gray-900 text-gray-400">
+        <div className="bg-white p-6 shadow-md mb-18 rounded-xl mt-4  dark:bg-gray-900 text-gray-400">
           <BalanceChart />
         </div>
       </div>
