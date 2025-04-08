@@ -53,8 +53,16 @@ function FinBank() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl bg-white rounded-xl p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8 md:space-y-10">
+    <div >
+      <div >
+      <div className="text-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-gray-400">
+            Transfer to Fin Bank
+          </h1>
+          <p className="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            Send money securely to Fin Bank
+          </p>
+        </div>
         {/* Recipient Details */}
         <div className="space-y-4 sm:space-y-6">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900">
@@ -123,7 +131,7 @@ function FinBank() {
                 />
               </div>
             </div>
-            <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+            <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
               <p>
                 Transfer Fee: <span className="font-medium">free</span>
               </p>
@@ -150,11 +158,11 @@ function FinBank() {
         </div>
 
         {/* Sender Details */}
-        <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-base sm:text-lg font-semibold text-gray-900">
+        <div className="space-y-4 sm:space-y-6 ">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Sender Details
           </h2>
-          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
             <p>
               <span className="font-medium">Full Name:</span> Jane Doe
             </p>
@@ -169,10 +177,10 @@ function FinBank() {
 
         {/* Review & Confirm */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-base sm:text-lg font-semibold text-gray-900">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Review Transfer
           </h2>
-          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
             <p>
               <span className="font-medium">Recipient:</span> {recipientName || "N/A"},{" "}
               {recipientAccount || "N/A"}, {"Fin Bank"}
@@ -210,11 +218,11 @@ function FinBank() {
         {/* Review Modal */}
         <Dialog open={isReviewModalOpen} onClose={() => setIsReviewModalOpen(false)}>
           <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900 dark:text-gray-200">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-200">
                 Confirm Transfer Details
               </DialogTitle>
-              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 space-y-2">
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 space-y-2 dark:text-gray-400">
                 <p>
                   <span className="font-medium">Recipient:</span> {recipientName},{" "}
                   {recipientAccount}, {"Fin Bank"}
@@ -250,11 +258,11 @@ function FinBank() {
         {/* PIN Modal */}
         <Dialog open={isPinModalOpen} onClose={() => setIsPinModalOpen(false)}>
           <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-200 ">
                 Enter Transaction PIN
               </DialogTitle>
-              <div className="mt-3 sm:mt-4">
+              <div className="mt-3 sm:mt-4 dark:text-gray-400">
                 <input
                   id="pin"
                   type="password"
@@ -286,11 +294,11 @@ function FinBank() {
         {/* Success Modal */}
         <Dialog open={isSuccessModalOpen} onClose={() => setIsSuccessModalOpen(false)}>
           <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900 dark:text-gray-200">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-200">
                 Transfer Successful
               </DialogTitle>
-              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 text-center">
+              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 text-center dark:text-gray-400">
                 Your transfer of ₦{Number(successAmount || 0)} to {successRecipientName} has been
                 successfully processed.
               </p>

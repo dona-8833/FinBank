@@ -13,8 +13,8 @@ function OtherBank() {
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [isPinModalOpen, setIsPinModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-const [successAmount, setSuccessAmount] = useState(""); // New state for success modal
-const [successRecipientName, setSuccessRecipientName] = useState(""); // New state for success modal
+  const [successAmount, setSuccessAmount] = useState("");
+  const [successRecipientName, setSuccessRecipientName] = useState("");
 
   const handleReviewSubmit = () => {
     if (!recipientName || !recipientAccount || !bankName || !amount) {
@@ -37,8 +37,8 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
     setIsSubmitting(true);
     setIsPinModalOpen(false);
 
-    setSuccessAmount(amount); // Set the amount for success modal
-    setSuccessRecipientName(recipientName); // Set the recipient name for success modal
+    setSuccessAmount(amount);
+    setSuccessRecipientName(recipientName);
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -53,10 +53,17 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center py-6 px-4 sm:py-12 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl bg-white rounded-xl  p-6 sm:p-8 md:p-10 space-y-6 sm:space-y-8 md:space-y-10">
+    <div >
+      <div >
         {/* Header */}
-
+        <div className="text-center dark:text-gray-200">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-gray-400">
+            Transfer to Other Bank
+          </h1>
+          <p className="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-600">
+            Send money securely to other banks
+          </p>
+        </div>
 
         {/* Recipient Details */}
         <div className="space-y-4 sm:space-y-6">
@@ -77,7 +84,7 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
                 placeholder="e.g., John Doe"
                 value={recipientName}
                 onChange={(e) => setRecipientName(e.target.value)}
-                className="mt-1 block w-full py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm placeholder-gray-400"
+                className="mt-1 block w-full py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400"
               />
             </div>
             <div>
@@ -93,7 +100,7 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
                 placeholder="e.g., 1234567890"
                 value={recipientAccount}
                 onChange={(e) => setRecipientAccount(e.target.value)}
-                className="mt-1 block w-full py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm placeholder-gray-400"
+                className="mt-1 block w-full py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400"
               />
             </div>
             <div>
@@ -109,7 +116,7 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
                 placeholder="e.g., First Bank"
                 value={bankName}
                 onChange={(e) => setBankName(e.target.value)}
-                className="mt-1 block w-full py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm placeholder-gray-400"
+                className="mt-1 block w-full py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400"
               />
             </div>
           </div>
@@ -135,15 +142,14 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
                 <input
                   id="amount"
                   type="number"
-                  step="0.01"
                   placeholder="0.00"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="block w-full pl-8 sm:pl-10 py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm placeholder-gray-400"
+                  className="block w-full pl-8 sm:pl-10 py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400"
                 />
               </div>
             </div>
-            <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+            <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
               <p>
                 Transfer Fee: <span className="font-medium">₦10.00</span>
               </p>
@@ -166,16 +172,16 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
             placeholder="e.g., Gift, Invoice Payment"
             value={reference}
             onChange={(e) => setReference(e.target.value)}
-            className="mt-1 block w-full py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm placeholder-gray-400"
+            className="mt-1 block w-full py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400"
           />
         </div>
 
         {/* Sender Details */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-base sm:text-lg font-semibold text-gray-900">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900  dark:text-gray-400">
             Sender Details
           </h2>
-          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
             <p>
               <span className="font-medium">Full Name:</span> Jane Doe
             </p>
@@ -190,10 +196,10 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
 
         {/* Review & Confirm */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-base sm:text-lg font-semibold text-gray-900">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Review Transfer
           </h2>
-          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700">
+          <div className="bg-gray-50 p-3 sm:p-4 rounded-lg text-xs sm:text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400">
             <p>
               <span className="font-medium">Recipient:</span> {recipientName || "N/A"},{" "}
               {recipientAccount || "N/A"}, {bankName || "N/A"}
@@ -230,13 +236,12 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
 
         {/* Review Modal */}
         <Dialog open={isReviewModalOpen} onClose={() => setIsReviewModalOpen(false)}>
-          <div className="fixed inset-0   backdrop-blur-sm flex justify-center items-center z-50
-">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+          <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900 dark:text-gray-200">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-400">
                 Confirm Transfer Details
               </DialogTitle>
-              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 space-y-2">
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 space-y-2 dark:text-gray-400">
                 <p>
                   <span className="font-medium">Recipient:</span> {recipientName},{" "}
                   {recipientAccount}, {bankName}
@@ -272,8 +277,8 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
         {/* PIN Modal */}
         <Dialog open={isPinModalOpen} onClose={() => setIsPinModalOpen(false)}>
           <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-400">
                 Enter Transaction PIN
               </DialogTitle>
               <div className="mt-3 sm:mt-4">
@@ -283,7 +288,7 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
                   placeholder="••••"
                   value={pin}
                   onChange={(e) => setPin(e.target.value)}
-                  className="w-full py-2 sm:py-3 px-3 sm:px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400 text-center"
+                  className="w-full py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm sm:text-base placeholder-gray-400 text-center dark:bg-gray-800 dark:text-gray-200"
                   maxLength={4}
                 />
               </div>
@@ -308,11 +313,11 @@ const [successRecipientName, setSuccessRecipientName] = useState(""); // New sta
         {/* Success Modal */}
         <Dialog open={isSuccessModalOpen} onClose={() => setIsSuccessModalOpen(false)}>
           <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
-            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg">
-              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center">
+            <DialogPanel className="bg-white rounded-xl p-6 w-full max-w-xs sm:max-w-md mx-4 sm:mx-0 shadow-lg dark:bg-gray-900">
+              <DialogTitle className="text-lg sm:text-2xl font-semibold text-gray-900 text-center dark:text-gray-400">
                 Transfer Successful
               </DialogTitle>
-              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 text-center">
+              <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-700 text-center dark:text-gray-400">
                 Your transfer of ₦{Number(successAmount || 0) + 10.00} to {successRecipientName} has been
                 successfully processed.
               </p>
