@@ -105,7 +105,7 @@ function FinBank() {
         </div>
 
         {/* Transfer Amount */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900">
             Transfer Amount
           </h2>
@@ -119,7 +119,6 @@ function FinBank() {
               </label>
               <div className="mt-1  rounded-lg shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <span className="text-gray-500 text-xs sm:text-sm">₦</span>
                 </div>
                 <input
                   id="amount"
@@ -143,7 +142,7 @@ function FinBank() {
         </div>
 
         {/* Payment Details */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900">
             Purpose of Transfer
           </h2>
@@ -158,7 +157,7 @@ function FinBank() {
         </div>
 
         {/* Sender Details */}
-        <div className="space-y-4 sm:space-y-6 ">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Sender Details
           </h2>
@@ -176,7 +175,7 @@ function FinBank() {
         </div>
 
         {/* Review & Confirm */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Review Transfer
           </h2>

@@ -7,8 +7,21 @@ import { FaChartPie, FaCreditCard, FaWallet } from "react-icons/fa";
 import Togglebal from "./Togglebal";
 import { Chip } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 function Dashboard() {
+  const {userData} = useOutletContext()
+  const dateOnly = new Date().toLocaleDateString("en-NG", {
+    timeZone: "Africa/Lagos",
+    weekday: "long",
+    year: "numeric",
+    month: "long",       
+    day: "numeric",      
+  });
+  
+  console.log(dateOnly); 
+  
+  
   const solidColor = {
     backgroundColor: "#1a677b",
   };
@@ -21,6 +34,10 @@ function Dashboard() {
   const cardColor = {
     backgroundColor: "#307487",
   };
+  console.log();
+
+  const balance =Number(userData.amount)
+  const formatted = balance.toLocaleString()
   return (
     <>
       <div className=" grid-cols-1 hidden md:grid  gap-6 p-4 md:p-6 lg:p-7 xl:p-10 2xl:p-12 bg-gray-100 dark:bg-gray-950">
@@ -76,10 +93,10 @@ function Dashboard() {
                 style={solidColorText}
                 className="text-4xl mt-3 text-center font-bold"
               >
-                ₦80,201.50
+                ₦{formatted}
               </h1>
               <p className="text-center text-xl font-light text-gray-600 mt-5">
-                December 21, 2025 . 02:30PM
+                {dateOnly}
               </p>
               <div className="  flex justify-center space-x-5 items-center mt-3 ">
                 <NavLink
@@ -206,7 +223,7 @@ function Dashboard() {
             </p>
           </div>
           <div className="flex flex-row-reverse justify-between items-center w-full mt-4">
-            <Togglebal />
+          <Togglebal amount={formatted} />
           </div>
           {/* <FaWallet className="text-3xl " style={solidColorText} /> */}
         </div>

@@ -3,23 +3,12 @@ import { Drawer, Button } from "antd";
 import { FaUserCircle } from "react-icons/fa";
 import { useDarkMode } from "../context/ThemeContext";
 
-const UserProfile = () => {
+const UserProfile = ({userData}) => {
   const [open, setOpen] = useState(false);
   const { darkMode } = useDarkMode(); // Get darkMode from context
 
   // Sample user data
-  const user = {
-    accountNumber: "1234567890",
-    accountLevel: "Gold",
-    fullName: "John Doe",
-    mobileNumber: "+1234567890",
-    nickname: "JDoe",
-    gender: "Male",
-    dateOfBirth: "01/01/1990",
-    email: "john.doe@example.com",
-    address: "123 Main Street, City, Country",
-    picture: "https://via.placeholder.com/150", // Replace with user's image
-  };
+
 
   return (
     <>
@@ -50,7 +39,7 @@ const UserProfile = () => {
           {/* Profile Picture */}
           <div className="text-center mb-6">
             <img
-              src={user.picture}
+              src={userData.picture}
               alt="User Profile"
               className="w-32 h-32 rounded-full mx-auto border-4 border-gray-300"
             />
@@ -61,55 +50,55 @@ const UserProfile = () => {
             {/* Account Number */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Account Number:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.accountNumber}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.accountNumber}</p>
             </div>
 
             {/* Account Level */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Account Level:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.accountLevel}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.vip}</p>
             </div>
 
             {/* Full Name */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Full Name:</label>
-              <p className="text-2xl font-bold text-gray-600 dark:text-white">{user.fullName}</p>
+              <p className="text-2xl font-bold text-gray-600 dark:text-white">{userData.firstName + " " +userData.lastName}</p>
             </div>
 
             {/* Mobile Number */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Mobile Number:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.mobileNumber}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.phoneNumber}</p>
             </div>
 
             {/* Nickname */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Nickname:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.nickname}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.nickname}</p>
             </div>
 
             {/* Gender */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Gender:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.gender}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.gender}</p>
             </div>
 
             {/* Date of Birth */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Date of Birth:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.dateOfBirth}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.dob}</p>
             </div>
 
             {/* Email */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Email:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.email}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.email}</p>
             </div>
 
             {/* Address */}
             <div className="flex justify-between items-center">
               <label className="text-lg text-gray-600 dark:text-gray-300">Address:</label>
-              <p className="text-xl text-gray-600 dark:text-gray-300">{user.address}</p>
+              <p className="text-xl text-gray-600 dark:text-gray-300">{userData.address}</p>
             </div>
           </div>
 

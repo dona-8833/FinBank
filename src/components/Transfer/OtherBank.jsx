@@ -123,7 +123,7 @@ function OtherBank() {
         </div>
 
         {/* Transfer Amount */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900">
             Transfer Amount
           </h2>
@@ -162,7 +162,7 @@ function OtherBank() {
         </div>
 
         {/* Payment Details */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900">
             Purpose of Transfer
           </h2>
@@ -177,7 +177,7 @@ function OtherBank() {
         </div>
 
         {/* Sender Details */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900  dark:text-gray-400">
             Sender Details
           </h2>
@@ -195,7 +195,7 @@ function OtherBank() {
         </div>
 
         {/* Review & Confirm */}
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-4 sm:space-y-6 pt-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-400">
             Review Transfer
           </h2>

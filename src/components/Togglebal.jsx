@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-const BalanceDisplay = () => {
+const BalanceDisplay = ({amount}) => {
   const [hidden, setHidden] = useState(false);
-  const balance = "₦5,000"; // You can replace this with dynamic balance data
 
   return (
     <div className="flex flex-row-reverse justify-between items-center w-full ">
@@ -12,12 +11,16 @@ const BalanceDisplay = () => {
       </button>
 
       {/* Balance Display (Click to Toggle) */}
+      <div className="flex items-center justify-center space-x-1">
+        <p className="text-xl font-bold">₦</p>
+
       <p
         className="text-xl font-bold cursor-pointer select-none"
         onClick={() => setHidden(!hidden)}
-      >
-        {hidden ? "•••••" : balance}
+        >
+        {hidden ? "•••••" : amount}
       </p>
+        </div>
     </div>
   );
 };
